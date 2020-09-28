@@ -17,7 +17,7 @@
 - name: fail on unsupported architecture
   fail:
     msg: "Architecture not supported {{ ansible_architecture }}"
-  when: ansible_architecture not in ['x86_64', 'ppc64le', 'armv7l', 'aarch64']
+  when: ansible_architecture not in ['x86_64', 'ppc64le', 'armv7l', 'aarch64', 's390x']
 
 - name: fail on unsupported distribution
   fail:
